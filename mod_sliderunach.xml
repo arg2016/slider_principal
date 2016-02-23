@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.3.0" client="site" method="upgrade">
+    <name>Slider UNACH</name>
+    <author>Alexis Aguilar</author>
+    <version>1.0.0</version>
+    <description>Modulo para mostrar las convocatorias y eventos publicados en la página principal de UNACH</description>
+    <files>
+        <filename>mod_sliderunach.xml</filename>
+        <filename module="mod_sliderunach">mod_sliderunach.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+        <folder>images</folder>
+        <folder>libs</folder>
+        
+    </files>
+    <config>
+        <fields name="params" addfieldpath="modules/mod_sliderunach/libs/elements">
+            <fieldset name="bassic" label="Cofigurar modulo">
+                <field type="text" name="cantidad" default="1" label="Cantidad de articulos a mostrar:"></field>
+                <!--Se crea un campo personalizado para mostrar las categorias disponibles de K2 -->     
+                <field name="categoriak2" type="Categoriak2" label="Categoria a elegir" required="true">
+                
+                </field>
+            </fieldset>
+            
+        
+            <fieldset
+                name="advanced">
+                <field
+                    name="tag_id"
+                    type="text"
+                    label="MOD_MENU_FIELD_TAG_ID_LABEL"
+                    description="MOD_MENU_FIELD_TAG_ID_DESC" />
+
+                <field
+                    name="class_sfx"
+                    type="text"
+                    label="MOD_MENU_FIELD_CLASS_LABEL"
+                    description="MOD_MENU_FIELD_CLASS_DESC" />
+					
+					<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                
+            </fieldset>
+            
+            			
+			
+                                
+            
+        </fields>
+    </config>
+</extension>
